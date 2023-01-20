@@ -1,0 +1,17 @@
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\bin\Debug\net6.0-windows\lotto program.exe
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\bin\Debug\net6.0-windows\lotto program.deps.json
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\bin\Debug\net6.0-windows\lotto program.runtimeconfig.json
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\bin\Debug\net6.0-windows\lotto program.dll
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\bin\Debug\net6.0-windows\lotto program.pdb
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.csproj.AssemblyReference.cache
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto_program.Lotto.resources
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.csproj.GenerateResource.cache
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.AssemblyInfoInputs.cache
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.AssemblyInfo.cs
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.csproj.CoreCompileInputs.cache
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.dll
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\refint\lotto program.dll
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.pdb
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\lotto program.genruntimeconfig.cache
+C:\Users\odsva\source\repos\DVGB07\Lab2\lotto program\lotto program\obj\Debug\net6.0-windows\ref\lotto program.dll

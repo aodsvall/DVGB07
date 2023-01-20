@@ -8,8 +8,10 @@ namespace calculator
         }
 
         private Button Button1;
-        private int LeftHandSide;
-        private int RightHandSide;
+        private int leftHandSide;
+        private int rightHandSide;
+        private bool operandSelected = false;
+        private string operand;
 
 
         private void InitializeComponent()
@@ -152,6 +154,7 @@ namespace calculator
             this.EqualButton.TabIndex = 6;
             this.EqualButton.Text = "=";
             this.EqualButton.UseVisualStyleBackColor = true;
+            this.EqualButton.Click += new System.EventHandler(this.EqualButton_Click);
             // 
             // DivisionButton
             // 
@@ -161,6 +164,7 @@ namespace calculator
             this.DivisionButton.TabIndex = 15;
             this.DivisionButton.Text = "/";
             this.DivisionButton.UseVisualStyleBackColor = true;
+            this.DivisionButton.Click += new System.EventHandler(this.DivisionButton_Click);
             // 
             // MultiplicationButton
             // 
@@ -168,8 +172,9 @@ namespace calculator
             this.MultiplicationButton.Name = "MultiplicationButton";
             this.MultiplicationButton.Size = new System.Drawing.Size(53, 49);
             this.MultiplicationButton.TabIndex = 14;
-            this.MultiplicationButton.Text = "X";
+            this.MultiplicationButton.Text = "x";
             this.MultiplicationButton.UseVisualStyleBackColor = true;
+            this.MultiplicationButton.Click += new System.EventHandler(this.MultiplicationButton_Click);
             // 
             // SubtractionButton
             // 
@@ -179,6 +184,7 @@ namespace calculator
             this.SubtractionButton.TabIndex = 13;
             this.SubtractionButton.Text = "-";
             this.SubtractionButton.UseVisualStyleBackColor = true;
+            this.SubtractionButton.Click += new System.EventHandler(this.SubtractionButton_Click);
             // 
             // AdditionButton
             // 
@@ -256,7 +262,20 @@ namespace calculator
         //Generic method to add to left text box
         private void AddToResultBox(Button button)
         {
+            if (operandSelected)
+            {
+                OperationTextBox.Text += button.Text;
+                return;
+            }
             ResultBox.Text += button.Text;
+        }
+
+        private void AddToOperand(Button button)
+        {
+            leftHandSide = int.Parse(ResultBox.Text);
+            operandSelected = true;
+            operand = button.Text;
+            OperationTextBox.Text += operand + " ";
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -313,11 +332,71 @@ namespace calculator
         {
             ResultBox.Clear();
             OperationTextBox.Clear();
+            operandSelected = false;
         }
 
         private void AdditionButton_Click(object sender, EventArgs e)
         {
-            LeftHandSide = int.Parse(ResultBox.Text);
+            OperationTextBox.Clear();
+            AddToOperand(AdditionButton);
         }
+        private void SubtractionButton_Click(object sender, EventArgs e)
+        {
+            OperationTextBox.Clear();
+            AddToOperand(SubtractionButton);
+        }
+        private void MultiplicationButton_Click(object sender, EventArgs e)
+        {
+            OperationTextBox.Clear();
+            AddToOperand(MultiplicationButton);
+        }
+
+        private void DivisionButton_Click(object sender, EventArgs e)
+        {
+            OperationTextBox.Clear();
+            AddToOperand(DivisionButton);
+        }
+        private void EqualButton_Click(object sender, EventArgs e)
+        {
+            string num;
+            num = string.Join(string.Empty, OperationTextBox.Text.Skip(2));
+            rightHandSide = int.Parse(num);
+
+            switch (operand)
+            {
+                case "+":
+                    ResultBox.Clear();
+                    leftHandSide += rightHandSide;
+                    ResultBox.Text += leftHandSide;
+                    break;
+                case "x":
+                    ResultBox.Clear();
+                    leftHandSide *= rightHandSide;
+                    ResultBox.Text += leftHandSide;
+                    break;
+                case "/":
+                    ResultBox.Clear();
+                    if (rightHandSide == 0)
+                    {
+                        MessageBox.Show("Cannot devide with zero", "ERROR");
+                        OperationTextBox.Clear();
+                        rightHandSide = 0;
+                        operandSelected = false;
+                        break;
+                    }
+                    leftHandSide /= rightHandSide;
+                    ResultBox.Text += leftHandSide;
+                    break;
+                case "-":
+                    ResultBox.Clear();
+                    leftHandSide -= rightHandSide;
+                    ResultBox.Text += leftHandSide;
+                    break;
+
+            }
+        }
+
+
     }
+
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\odsva\\source\\repos\\DVGB07\\calculator\\calculator\\calculator.csproj",
+      "projectUniqueName": "C:\\Users\\odsva\\source\\repos\\DVGB07\\Lab2\\calculator\\calculator\\calculator.csproj",
       "projectName": "calculator",
-      "projectPath": "C:\\Users\\odsva\\source\\repos\\DVGB07\\calculator\\calculator\\calculator.csproj",
+      "projectPath": "C:\\Users\\odsva\\source\\repos\\DVGB07\\Lab2\\calculator\\calculator\\calculator.csproj",
       "packagesPath": "C:\\Users\\odsva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\odsva\\source\\repos\\DVGB07\\calculator\\calculator\\obj\\",
+      "outputPath": "C:\\Users\\odsva\\source\\repos\\DVGB07\\Lab2\\calculator\\calculator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\odsva\\AppData\\Roaming\\NuGet\\NuGet.Config",
