@@ -272,7 +272,14 @@ namespace calculator
 
         private void AddToOperand(Button button)
         {
-            leftHandSide = int.Parse(ResultBox.Text);
+            try
+            {
+                leftHandSide = int.Parse(ResultBox.Text);
+            } catch (OverflowException e)
+            {
+                MessageBox.Show("Int är större än maxvärdet", "ERROR");
+                ResultBox.Clear();
+            }
             operandSelected = true;
             operand = button.Text;
             OperationTextBox.Text += operand + " ";
@@ -367,12 +374,28 @@ namespace calculator
                 case "+":
                     ResultBox.Clear();
                     leftHandSide += rightHandSide;
-                    ResultBox.Text += leftHandSide;
+                    if (leftHandSide >= int.MaxValue)
+                    {
+                        ResultBox.Clear();
+                        MessageBox.Show("Största värdet på int uppnått, värdet är 2 147 483 647, värdet nollställs.", "ERROR");
+                    }
+                    else
+                    {
+                        ResultBox.Text += leftHandSide;
+                    }
                     break;
                 case "x":
                     ResultBox.Clear();
                     leftHandSide *= rightHandSide;
-                    ResultBox.Text += leftHandSide;
+                    if(leftHandSide >= int.MaxValue)
+                    {
+                        ResultBox.Clear();
+                        MessageBox.Show("Största värdet på int uppnått, värdet är 2 147 483 647, värdet nollställs.", "ERROR");
+                    }
+                    else
+                    {
+                        ResultBox.Text += leftHandSide;
+                    }
                     break;
                 case "/":
                     ResultBox.Clear();
